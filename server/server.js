@@ -40,6 +40,8 @@ app.use(cors());
 app.get('/',(req,res)=>{
     res.send("Server is Live");
 })
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 
 app.use("/api/status", (req, res)=> res.send("Server is live"));
 app.use("/api/auth", userRouter);
