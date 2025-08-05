@@ -51,9 +51,4 @@ if(process.env.NODE_ENV !== "production"){
     server.listen(PORT, ()=> console.log("Server is running on PORT: " + PORT));
 }
 
-app.listen(process.env.PORT,()=>{
-    console.log('Server is Live!')
-})
-
-
 export default server;
