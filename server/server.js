@@ -6,7 +6,6 @@ import { connectDB } from "./lib/db.js";
 import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
-
 // Create Express app and HTTP server
 const app = express();
 const server = http.createServer(app)
@@ -51,6 +50,10 @@ if(process.env.NODE_ENV !== "production"){
     const PORT = process.env.PORT || 5000;
     server.listen(PORT, ()=> console.log("Server is running on PORT: " + PORT));
 }
+
+app.listen(process.env.PORT,()=>{
+    console.log('Server is Live!')
+})
 
 
 export default server;
