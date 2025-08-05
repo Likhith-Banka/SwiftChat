@@ -37,6 +37,9 @@ io.on("connection", (socket)=>{
 app.use(express.json({limit: "4mb"}));
 app.use(cors());
 
+app.get('/',(req,res)=>{
+    res.send("Server is Live");
+})
 
 app.use("/api/status", (req, res)=> res.send("Server is live"));
 app.use("/api/auth", userRouter);
